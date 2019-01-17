@@ -1,0 +1,68 @@
+.portfolio {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    .portfolio-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 100vw;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .box {
+            position: relative;
+            float: left;
+            background: color(light-grey);
+            width: 310px;
+            height: 310px;
+            margin: 20px;
+            padding: 20px;
+            .box-content {
+                margin-top: 150px;
+            }
+            h1 {
+                margin: 0;
+                text-align: center;
+            }
+            .icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: color(accent);
+                transition: .5s;
+                z-index: 1;
+                font-size: 80px;
+                text-align: center;
+                line-height: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                i {
+                    position: absolute;
+                    line-height: 100%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &:hover .icon {
+                top: 20px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                line-height: 80px;
+                font-size: 50px;
+                transform: translateX(115px);
+                padding: 0;
+            }
+            &:nth-child(1):hover .icon {
+                line-height: 75px;
+                padding: 0 0 0px 5px;
+            }
+        }
+    }
+}

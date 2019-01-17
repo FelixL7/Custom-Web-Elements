@@ -1,0 +1,249 @@
+/*##################################
+Navigation
+##################################*/
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(124, 175, 96);
+    font-size: 1.6em;
+    position: fixed;
+    z-index: 99;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.return-ref {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    color: #3b3b3b;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+        background-color: rgb(140, 196, 108);
+    }
+}
+
+nav {
+    height: 50px;
+}
+
+.logo {
+    float: left;
+    margin-left: 16px;
+    line-height: 50px;
+}
+
+.logo a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.nav-wrapper ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    visibility: hidden;
+}
+
+.nav-wrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2em;
+}
+
+.nav-wrapper ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.nav-wrapper ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+}
+
+.nav-wrapper ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+}
+
+.nav-wrapper ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+}
+
+.nav-wrapper ul li:nth-child(5) a {
+    transition-delay: 0.6s;
+}
+
+.nav-wrapper ul li:not(:first-child) {
+    margin-left: 0;
+}
+
+.nav-wrapper ul li a {
+    padding: 10px 24px;
+    opacity: 0;
+    color: #000;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    transform: translateX(-20px);
+    transition: opacity 0.2s ease;
+    &.active {
+        text-decoration: underline;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-wrapper {
+    transition: all 0.2s ease;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    z-index: -2;
+}
+
+#nav:checked~.nav-wrapper {
+    background: #fff;
+    height: calc(100% - 50px);
+    opacity: 1;
+    transition: all 0.2s ease;
+    z-index: 99;
+    ul {
+        visibility: initial;
+    }
+}
+
+#nav:checked~.nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #3b3b3b;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+
+/*
+   * Squeeze
+   */
+
+.hamburger--squeeze .hamburger-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--squeeze .hamburger-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.hamburger--squeeze .hamburger-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+#nav:checked+.hamburger--squeeze .hamburger-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#nav:checked+.hamburger--squeeze .hamburger-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+#nav:checked+.hamburger--squeeze .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav-icon {
+    float: right;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}

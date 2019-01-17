@@ -1,0 +1,116 @@
+$tag-title: #669999;
+$tag: #999999;
+$tag-text: #D4D4D4;
+$kommentar: #849867;
+.abs-center {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.construction {
+    width: 424px;
+}
+
+.dark-theme {
+    background-color: #1E1E1E;
+    color: $tag;
+    padding: 10px 30px 10px 10px;
+}
+
+code {
+    .code-lvl-0 {
+        margin-left: 0px;
+    }
+    .code-lvl-1 {
+        margin-left: 15px;
+    }
+    .code-lvl-2 {
+        margin-left: 30px;
+    }
+    .tag-title {
+        color: $tag-title;
+    }
+    .tag-text {
+        color: $tag-text;
+    }
+    .kommentar {
+        color: $kommentar;
+    }
+}
+
+$h1-width: 145px;
+$kom-width: 354px;
+$con-width: 300px;
+.line {
+    width: auto;
+    display: inline-block;
+    border-right: 2px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.h1-width {
+    width: $h1-width;
+    &.anim-typewriter {
+        animation: typewriter-h1 2s steps(18) .5s 1 normal both, blinkTextCursor 1s steps(40) 5 normal;
+    }
+}
+
+.kom-width {
+    &.anim-typewriter {
+        /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+        animation: typewriter-kom 4s steps(44) 5s 1 normal both, blinkTextCursor 1s steps(40) 5s infinite normal;
+    }
+}
+
+.con-width {
+    &.anim-typewriter {
+        /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+        animation: typewriter-con 4s steps(36) 5s 1 normal both, blinkTextCursor 1s steps(40) 5s infinite normal;
+    }
+}
+
+@keyframes typewriter-h1 {
+    from {
+        width: 0%;
+    }
+    to {
+        width: $h1-width;
+    }
+}
+
+@keyframes typewriter-kom {
+    from {
+        width: 0%;
+    }
+    to {
+        width: $kom-width;
+    }
+}
+
+@keyframes typewriter-con {
+    from {
+        width: 0%;
+    }
+    to {
+        width: $con-width;
+    }
+}
+
+@keyframes blinkTextCursor {
+    0% {
+        border-right-color: $tag-text;
+    }
+    49% {
+        border-right-color: $tag-text;
+    }
+    50% {
+        border-right-color: transparent;
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}

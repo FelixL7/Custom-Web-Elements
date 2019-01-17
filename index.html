@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Web Elements</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="wrapper bg-grey">
+        <div class="container no-overflow services">
+
+            <div class="content-grid">
+                <h1>Buttons</h1>
+                <section class="buttons">
+                    <div class="grid-item button vcenter">
+                        <a class="btn standard border">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn standard background round">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn fill-animation">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn rect-rotate">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn pulse">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn anim-border"><span></span>Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn fill-center">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button">
+                        <div class="wrapper-perspective">
+                            <a class="btn perspective-3d">Klick mich</a>
+                        </div>
+                    </div>
+
+                    <div class="grid-item button vcenter">
+                        <a class="btn shine">Klick mich</a>
+                    </div>
+
+                    <div class="grid-item button">
+                        <a class="btn circle"><span>Klick mich</span></a>
+                    </div>
+
+                    <div class="grid-item button">
+                        <a class="btn circle-glowing">Klick mich</a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="content-grid">
+                <h1>Checkboxes</h1>
+                <section class="switches">
+
+                    <!--<div class="grid-item switch">-->
+                    <!-- Rectangular switch -->
+                    <!--<label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider" ></span>
+                        </label>
+                    </div>-->
+
+                    <div class="grid-item switch">
+                        <!-- Rectangular switch checked -->
+                        <label class="switch">
+                            <input type="checkbox" checked/>
+                            <span class="slider" ></span>
+                        </label>
+                    </div>
+
+                    <!--<div class="grid-item switch">-->
+                    <!-- Background switch -->
+                    <!--<label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider background"></span>
+                        </label>
+                    </div>-->
+
+                    <div class="grid-item switch">
+                        <!-- switch with caption
+                        do it with grid! -->
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider caption"><div class="switch-left">On</div><div class="switch-right">Off</div></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <label class="switch caption-animate">
+                            <input type="checkbox"/>
+                            <span class="slider caption caption-animate">
+                                <div class="boundary">
+                                    <div class="switch-left">On</div><div class="switch-right">Off</div>                   
+                                </div> 
+                            </span>                      
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <!-- switch line -->
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider switch-line"></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <!-- switch line round -->
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider switch-line round"></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <!-- switch round accent animation onclick -->
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider switch-over-line round"></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <!-- Rounded switch -->
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <!-- Rounded switch with shadow -->
+                        <label class="switch">
+                            <input type="checkbox" />
+                            <span class="slider round shadow"></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <label class="switch animate">
+                            <input type="checkbox" />
+                            <span class="slider animated" ></span>
+                        </label>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <div class="checkbox-container materialize-switch">
+                            <label>
+                              Off
+                              <input type="checkbox">
+                              <span class="lever"></span>
+                              On
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <div class="checkbox-container animated-tick">
+                            <input type="checkbox" id="rememberMe" />
+                            <label class="checkbox" for="rememberMe"></label>
+                            <label for="rememberMe">Eingeloggt bleiben?</label>
+                        </div>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <div class="checkbox-container materialize-cb">
+                            <label>
+                            <input type="checkbox" />
+                            <span>Check me</span>
+                          </label>
+                        </div>
+                    </div>
+
+                    <div class="grid-item switch">
+                        <div class="checkbox-container materialize-cb">
+                            <label>
+                            <input type="checkbox" class="filled-in" checked="checked" />
+                            <span>Check me</span>
+                          </label>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="content-grid">
+                <h1>Eingabefelder</h1>
+                <section class="input-fields">
+                    <div class="grid-item input-field">
+                        <label for="name">Name:</label>
+                        <input name="name" class="input" id="name" type="text" />
+                    </div>
+
+                    <div class="grid-item input-field vcenter">
+                        <input name="name" class="input" id="name" type="text" placeholder="Name" />
+                    </div>
+
+                    <div class="grid-item input-field vcenter">
+                        <input name="name" class="input border-bottom" id="name" type="text" placeholder="Name" />
+                    </div>
+                </section>
+            </div>
+
+            <div class="content-grid">
+                <h1>Searchboxes</h1>
+                <section class="searchboxes">
+
+                    <div class="grid-item searchbox">
+                        <div class="search-wrapper">
+                            <input type="text" class="searchTerm" placeholder="Suchbegriff">
+                            <button type="submit" class="searchButton">
+                                  <i class="fa fa-search"></i>
+                               </button>
+                        </div>
+                    </div>
+
+                    <div class="grid-item searchbox col-2">
+                        <div class="search-wrapper">
+                            <input type="text" placeholder="Suchbegriff" class="searchbox">
+                            <button type="submit" class="searchbox-btn">Suchen</button>
+                        </div>
+                    </div>
+
+                    <div class="grid-item searchbox">
+                        <div class="search-wrapper">
+                            <input type="search" class="glowing-sb" placeholder="Glühende Suche...">
+                            <button class="glowing-sb-btn">Suchen</button>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <!--<div class="content-grid">
+                <h1>Akkordeons</h1>
+                <section class="accordeons">
+
+                </section>
+            </div>-->
+
+            <div class="content-grid">
+                <h1>Loader</h1>
+                <section class="loaders">
+                    <div class="grid-item loader">
+                        <div class="loader-standard round"></div>
+                    </div>
+
+                    <div class="grid-item col-2 loader">
+                        <div class="loader-bar"><span class="bar"></span></div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="jumping-dots"></div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="jumping-circle-dots"></div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="rot-4-squares">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="folding-squares">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="pulsing-squares">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="split">
+                            <span>Loading</span>
+                            <span>Loading</span>
+                        </div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="text-pointer">
+                            <h1 data-text="Loading...">Loading...</h1>
+                        </div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="walking-square">
+                            <div class="square"></div>
+                            <div class="track"><span>Finish</span></div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item loader">
+                        <div class="rot-3d-squares">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

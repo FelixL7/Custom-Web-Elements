@@ -1,0 +1,27 @@
+.input-field input.input,
+.input-field textarea.input,
+.input-field select.input {
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #e0e0e0;
+    border-radius: .25em;
+    -moz-border-radius: .25em;
+    -webkit-border-radius: .25em;
+    padding: 5px;
+}
+
+.input-field input:focus,
+.input-field textarea:focus,
+.input-field select:focus {
+    border-color: #f39c12;
+}
+
+.grid-item.input-field label {
+    margin-top: 0px;
+}
+
+.input-field input.border-bottom {
+    border: 0px;
+    border-bottom: 1px solid color(light-grey);
+}

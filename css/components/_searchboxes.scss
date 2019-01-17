@@ -1,0 +1,195 @@
+.search-wrapper {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    padding: 15px;
+    margin: 0px auto 0px auto;
+    position: relative;
+}
+
+input.searchbox {
+    width: calc(100% - 120px);
+    height: 40px;
+    padding: 10px 5px;
+    /*position: absolute;*/
+    float: left;
+    font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+input.searchbox:focus {
+    outline: 0;
+    background: #fff;
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8) inset;
+}
+
+button.searchbox-btn {
+    overflow: visible;
+    position: relative;
+    float: left;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: color(accent);
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+}
+
+button.searchbox-btn:hover {
+    background: color(accent-light);
+}
+
+button.searchbox-btn:active,
+button.searchbox-btn:focus {
+    background: color(accent-light);
+}
+
+button.searchbox-btn:before {
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent color(accent) transparent;
+    top: 12px;
+    left: -6px;
+}
+
+button.searchbox-btn:hover:before {
+    border-right-color: color(accent-light);
+}
+
+button.searchbox-btn:focus:before {
+    border-right-color: color(accent-light);
+}
+
+button.searchbox-btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+/* Glowing*/
+
+input.glowing-sb {
+    background: linear-gradient(color(primary-light), color(primary));
+    border: 1px solid color(light-grey);
+    border-radius: 5px 0 0 5px;
+    color: #888;
+    display: block;
+    float: left;
+    /*font-family: 'Cabin', helvetica, arial, sans-serif;*/
+    font-size: 13px;
+    font-weight: 400;
+    height: 40px;
+    margin: 0;
+    padding: 0 10px;
+    text-shadow: 0 -1px 0 #000;
+    width: 200px;
+    width: calc(100% - 92px);
+}
+
+input.glowing-sb:focus {
+    animation: glow 800ms ease-out infinite alternate;
+    background: linear-gradient(color(primary-light), color(primary));
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1);
+    color: #efe;
+    outline: none;
+}
+
+input.glowing-sb:focus::-webkit-input-placeholder {
+    color: #efe;
+}
+
+input.glowing-sb:focus:-moz-placeholder {
+    color: #efe;
+}
+
+button.glowing-sb-btn {
+    background: linear-gradient(color(primary-light), color(primary));
+    box-sizing: border-box;
+    border: 1px solid color(light-grey);
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    display: block;
+    float: left;
+    /*font-family: 'Cabin', helvetica, arial, sans-serif;*/
+    font-size: 15px;
+    font-weight: 800;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-shadow: 0 -1px 0 #000;
+    width: 80px;
+    cursor: pointer;
+}
+
+button.glowing-sb-btn:hover,
+button.glowing-sb-btn:focus {
+    background: linear-gradient(color(primary-light), color(primary));
+    color: color(accent);
+    outline: none;
+}
+
+button.glowing-sb-btn:active {
+    background: linear-gradient(color(primary-light), color(primary));
+    top: 1px;
+}
+
+@keyframes glow {
+    0% {
+        border-color: darken(color(primary), 50%);
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1);
+    }
+    100% {
+        border-color: lighten(color(primary), 20%);
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4);
+    }
+}
+
+
+/* Standard */
+
+.searchTerm {
+    float: left;
+    width: calc(100% - 70px);
+    border: 3px solid color(accent);
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: color(accent);
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    float: left;
+    border: 1px solid color(accent);
+    background: color(accent);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}

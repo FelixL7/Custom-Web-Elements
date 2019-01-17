@@ -1,0 +1,318 @@
+a.btn {
+    width: 80%;
+    /*height: 40px;*/
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    margin: auto;
+    &.standard {
+        background: color(accent);
+        color: color(white);
+    }
+    &.border {
+        line-height: 32px;
+        box-sizing: border-box;
+        border: 4px solid color(accent);
+        &:hover {
+            border: 4px solid color(primary);
+        }
+    }
+    &.background:hover {
+        background: color(accent-light);
+    }
+    &.round {
+        border-radius: .25em;
+    }
+    &.fill-animation {
+        position: absolute;
+        left: 9%;
+        background: none;
+        border: 2px solid color(accent);
+        color: #070707;
+        z-index: 1;
+        transition: 0.8s ease-out;
+        &:hover {
+            color: color(white);
+            transition: 0.8s ease-out;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            background: color(accent);
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            top: 100%;
+            z-index: -1;
+            transition: top 0.8s ease-out;
+        }
+        &:hover:before {
+            top: 0px;
+        }
+    }
+    &.fill-center {
+        position: absolute;
+        /*width: 50%;*/
+        transform: translate(0, 15%) skewX(-20deg);
+        padding: 10px 30px;
+        background: color(white);
+        border: 2px solid color(accent);
+        color: #070707;
+        transition: 0.8s ease-out;
+        font-weight: 900;
+        text-transform: uppercase;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: color(primary);
+            background: complement(color(accent-light));
+            mix-blend-mode: exclusion;
+            transform: scaleX(0);
+            transition: 0.5s;
+        }
+        &:hover:before {
+            transform: scaleX(1);
+        }
+    }
+    &.perspective-3d {
+        background: color(accent);
+        position: absolute;
+        top: calc(50% - 25px);
+        transform: perspective(1000px) rotate(-30deg) skew(25deg);
+        transition: .5s;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, .5);
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            height: 100%;
+            width: 20px;
+            background: darken(color(accent), 10%);
+            transition: .5s;
+            transform: rotate(0deg) skewY(-45deg);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: -10px;
+            height: 20px;
+            width: 100%;
+            background: darken(color(accent), 10%);
+            transition: .5s;
+            transform: rotate(0deg) skewX(-45deg);
+        }
+        &:hover {
+            transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(10px, -10px);
+            box-shadow: -25px 25px 25px rgba(0, 0, 0, .5);
+        }
+    }
+    &.circle {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(0deg, color(accent), lighten(color(accent), 10%));
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding: 8px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+        transition: .5s;
+        border: none;
+        &:hover {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+            background: linear-gradient(0deg, color(accent-light), lighten(color(accent-light), 10%));
+            transition: .5s;
+        }
+        &:hover span {
+            background: linear-gradient(0deg, lighten(color(accent-light), 5%), color(accent-light));
+            transition: .5s;
+        }
+        span {
+            width: 134px;
+            height: 134px;
+            display: block;
+            /*margin-top: 8px;
+            margin-left: 8px;*/
+            top: 8px;
+            left: 8px;
+            background: linear-gradient(0deg, lighten(color(accent), 5%), color(accent));
+            border-radius: 50%;
+            line-height: 135px;
+            transition: .5s;
+        }
+    }
+    &.circle-glowing {
+        position: relative;
+        width: 135px;
+        height: 135px;
+        background: color(light-grey);
+        display: block;
+        margin: 10% auto;
+        border-radius: 50%;
+        transition: .5s;
+        line-height: 135px;
+        font-weight: bolder;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: color(primary-light);
+            transform: scale(.9);
+            transition: .5s;
+            z-index: -1;
+        }
+        &:hover:before {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px color(primary-light);
+        }
+        &:hover {
+            box-shadow: 0 0 5px color(primary-light);
+            text-shadow: 0 0 5px color(primary-light);
+            color: color(primary-light);
+        }
+    }
+    &.rect-rotate {
+        border: 2px solid color(accent);
+        position: absolute;
+        overflow: hidden;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: color(accent-light);
+            z-index: -1;
+            transform-origin: bottom left;
+            transform: rotate(-90deg);
+            transition: .5s;
+        }
+        &:hover:before {
+            transform: rotate(0deg);
+        }
+    }
+    &.anim-border {
+        color: color(white);
+        overflow: hidden;
+        position: absolute;
+        transition: .5s;
+        span {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border-left: 2px solid color(accent);
+            border-right: 2px solid color(accent);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: .5s;
+        }
+        &:hover {
+            color: #070707;
+            span {
+                transform: scaleY(1);
+                transition-delay: .6s;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: color(accent);
+            z-index: -1;
+            transition: .5s;
+        }
+        &:hover:before {
+            top: calc(100% - 2px);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(-100% + 2px);
+            left: 100%;
+            width: 100%;
+            height: 100%;
+            background: color(accent);
+            z-index: -1;
+            transition: .5s;
+        }
+        &:hover:after {
+            left: 0px;
+            transition-delay: .2s;
+        }
+    }
+    &.shine {
+        position: absolute;
+        overflow: hidden;
+        background: linear-gradient(90deg, color(accent), color(accent-light));
+        transition: .5s;
+        border-radius: 20px;
+        transform-origin: top;
+        transform: perspective(500px) rotateY(30deg) translateY(50%);
+        &:hover {
+            transform: perspective(500px) rotateY(-30deg) translateY(50%);
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, white, transparent);
+            transition: .5s;
+        }
+        &:hover:before {
+            left: 100%;
+        }
+    }
+    &.pulse {
+        position: absolute;
+        border: 2px solid color(accent);
+        transition: .5s;
+        &:hover {
+            background: color(accent);
+            color: color(white);
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 2px solid color(accent);
+        }
+        &:hover:before {
+            transform: scale(1.2, 1.4);
+            opacity: 0;
+            transition: .5s;
+        }
+    }
+}
+
+.wrapper-perspective {
+    height: 100%;
+    width: 60%;
+    margin: auto auto;
+    position: relative;
+}

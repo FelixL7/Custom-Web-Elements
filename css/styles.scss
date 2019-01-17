@@ -1,0 +1,182 @@
+$colors: ( background: #f2f2f2, light-grey: #ccc, white: #FFFFFF, primary: rgb(124, 175, 96), primary-light: rgb(140, 196, 108), accent: #FF753D, accent-light: #f39c12, );
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+@import "components/mixins";
+@import "site/site";
+@import "site/navigation";
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px 20px;
+    h1 {
+        grid-column: 1 /span 3;
+        grid-row: 1 / span 1;
+    }
+    section {
+        .grid-item {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            background: color(white);
+            border-radius: 5px;
+            z-index: 1;
+        }
+        @include min-tablet {
+            .grid-item.col-2 {
+                grid-column: auto /span 2;
+            }
+        }
+    }
+    section.switches {
+        grid-column: 1 /span 3;
+        grid-row: 2 /span 1;
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: 100%;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include desktop-big {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .grid-item.switch {
+            min-height: 100px;
+            text-align: center;
+            position: relative;
+        }
+    }
+    section.loaders {
+        grid-column: 1 /span 3;
+        grid-row: 3 /span 1;
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: 100%;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include desktop-big {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .grid-item.loader {
+            position: relative;
+            min-height: 150px;
+        }
+        .grid-item.loader div {
+            margin: 0px auto;
+        }
+    }
+    section.input-fields {
+        grid-column: 1 /span 3;
+        grid-row: 3 /span 1;
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: 100%;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include desktop-big {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .grid-item.input-field input {
+            margin: 0px auto;
+        }
+    }
+    section.buttons {
+        grid-column: 1 /span 3;
+        grid-row: 3 /span 1;
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: 100%;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include desktop-big {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .grid-item.button {
+            min-height: 220px;
+            position: relative;
+            /*display: table-cell;
+            vertical-align: middle;*/
+            z-index: 1;
+        }
+        .grid-item.button.vcenter a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -40%;
+            margin-top: -20px;
+            margin-top: -40px;
+        }
+    }
+    section.searchboxes {
+        grid-column: 1 /span 3;
+        grid-row: 3 /span 1;
+        display: grid;
+        grid-gap: 20px 20px;
+        grid-template-columns: 100%;
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include desktop-big {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        .grid-item.input-field input {
+            margin: 0px auto;
+        }
+    }
+}
+
+
+/*#######################################################
+            Switches                                     */
+
+@import "components/switches";
+@import "components/checkboxes";
+
+/*#######################################################
+            Loader                                       */
+
+@import "components/loader";
+
+/*##############################################
+            Eingabefelder */
+
+@import "components/input-fields";
+
+/*##############################################
+            Buttons */
+
+@import "components/buttons";
+
+/*##############################################
+            Searchbox */
+
+@import "components/searchboxes";
+
+/*##############################################
+            Code */
+
+@import "components/code";
+
+/*##############################################
+            Code */
+
+@import "components/portfolio";
